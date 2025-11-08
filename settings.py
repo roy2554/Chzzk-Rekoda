@@ -82,7 +82,7 @@ while True:
                 )
 
                 if (output_dir == ""):
-                    output_dir = id
+                    output_dir = f"recordings/{id}"
 
                 while True:
                     answer = str(
