@@ -1,0 +1,9 @@
+version: "3.8"
+
+services:
+  rekoda:
+    image: chzzk-rekoda:latest
+    container_name: chzzk-recorder
+    restart: unless-stopped
+    volumes:
+      - ./recordings:/app/recordings
