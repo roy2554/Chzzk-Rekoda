@@ -456,7 +456,7 @@ async def record_stream(
                         "", live_info.get("liveTitle", "").rstrip()
                     )
                     output_dir = Path(
-                        channel.get("output_dir", "./recordings")
+                        channel.get("output_dir", f"./recordings/{channel_id}")
                     ).expanduser()
                     temp_output_file = shorten_filename(
                         f"[{current_time.replace(':', '_')}] {channel_name} {live_title}.ts.part"
