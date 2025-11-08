@@ -8,6 +8,7 @@ dependencies = [
     "aiofiles",
     "aiohttp",
     "orjson",
+    "requests>=2.32.5",
     "rich",
     "streamlink",
     "uvloop; sys_platform != 'win32'",
