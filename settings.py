@@ -1,6 +1,8 @@
 import os
 import json
 
+from chzzk_api import get_channel_info
+
 # File path settings
 script_directory = os.path.dirname(os.path.abspath(__name__))
 channel_count_file_path = os.path.join(script_directory, "channel_count.txt")
@@ -74,14 +76,21 @@ while True:
                         "Enter the unique ID of the streamer channel you want to add: "
                     )
                 )
-                name = str(input("Enter the streamer name:  "))
+
+                channel_info = get_channel_info(id)
+
+                name = str(input(f"Enter the streamer name({channel_info['channelName']}):  "))
+
+                if name == "":
+                    name = channel_info['channelName']
+
                 output_dir = str(
                     input(
                         "Specify the storage path (type a name to save it in the program's directory, or leave it empty to use the default location): "
                     )
                 )
 
-                if (output_dir == ""):
+                if output_dir == "":
                     output_dir = f"recordings/{id}"
 
                 while True:
