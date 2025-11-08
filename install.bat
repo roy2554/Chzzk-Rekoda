@@ -41,13 +41,8 @@ for /D %%A in (ffmpeg-*) do (
     )
 )
 
-echo Starting configuration
-REM Execute the settings script
-call settings.bat
-echo Configuration completed!
-echo If you want to reconfigure, please run the \"settings.bat\" script directly
+echo Installation completed!
+echo You can now run the settings.bat script manually if needed.
 
-REM Pause execution to allow the user to read the output
 pause
-
 exit /b 0
