@@ -77,7 +77,7 @@ while True:
                 name = str(input("Enter the streamer name:  "))
                 output_dir = str(
                     input(
-                        "Specify the storage path (just type the name to save it in the same location as the program): "
+                        "Specify the storage path (type a name to save it in the program's directory, or leave it empty to use the default location): "
                     )
                 )
                 while True:
