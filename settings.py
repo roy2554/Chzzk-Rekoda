@@ -80,6 +80,10 @@ while True:
                         "Specify the storage path (type a name to save it in the program's directory, or leave it empty to use the default location): "
                     )
                 )
+
+                if (output_dir == ""):
+                    output_dir = id
+
                 while True:
                     answer = str(
                         input(
